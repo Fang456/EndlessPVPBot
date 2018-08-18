@@ -1,1 +1,1 @@
-worker: python bot.py, config.json
+worker: python bot.py
