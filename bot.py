@@ -26,7 +26,7 @@ async def prefix(ctx):
         await ctx.send(config["no-permission-message"])
     else:
         user = ctx.author
-        role = discord.utils.get(ctx.guild.roles, name=config["role-applied-name"])
+        role = discord.utils.get(ctx.guild.roles, name["donor"])
         await user.add_roles(role)
         try:
             await user.edit(nick="[Donor] " + user.name)
