@@ -1,7 +1,7 @@
 {
-  "bot-token": "",
-  "command-prefix": "",
-  "role-required-name": "",
-  "role-applied-name": "",
-  "no-permission-message": ""
+  "bot-token": "NDgwNDUyMjA4OTkxNjY2MTg3.DloAQg.Y3TZG7KNiI_alpmX6aqPAbEarRk",
+  "command-prefix": "!",
+  "role-required-name": "Explorer",
+  "role-applied-name": "Donor",
+  "no-permission-message": "**(!)** You do not have permission to use this command!"
 }
