@@ -3,5 +3,5 @@
   "command-prefix": "!",
   "role-required-name": "Explorer",
   "role-applied-name": "Donor",
-  "no-permission-message": "**(!)** You do not have permission to use this command!"
+  "no-permission-message": "**(!)** You do not have permission to use this command!",
 }
