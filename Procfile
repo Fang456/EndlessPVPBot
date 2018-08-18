@@ -1,1 +1,1 @@
-worker: python bot.py, node config.json
+worker: python bot.py
