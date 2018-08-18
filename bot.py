@@ -3,7 +3,8 @@ from discord.ext import commands
 import asyncio
 import json
 
-bot = commands.Bot(command_prefix=["command-prefix"])
+config = json.loads(open("./config.json").read())
+bot = commands.Bot(command_prefix=config["command-prefix"])
 bot.remove_command(name="help")
 
 @bot.event
@@ -21,15 +22,15 @@ async def on_ready():
 
 @bot.command()
 async def prefix(ctx):
-    if not ["explorer"] in [role.name for role in ctx.author.roles]:
-        await ctx.send["no-permission-message"]
+    if not config["role-required-name"] in [role.name for role in ctx.author.roles]:
+        await ctx.send(config["no-permission-message"])
     else:
         user = ctx.author
-        role = discord.utils.get(ctx.guild.roles, name=["donor"])
+        role = discord.utils.get(ctx.guild.roles, name=config["role-applied-name"])
         await user.add_roles(role)
         try:
             await user.edit(nick="[Donor] " + user.name)
         except discord.Forbidden:
             await ctx.send("I don't have permission to change your nickname.")
 
-bot.run(["bot-token"])
+bot.run(config["bot-token"])
